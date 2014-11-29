@@ -5,6 +5,24 @@ from pygame.locals import *
 import sys
 
 
+#イベントハンドラー
+#for event in pygame.event.get():
+#        if event.type == QUIT:
+#            sys.exit()
+        # マウスクリックで蛇をコピー
+#        if event.type == MOUSEBUTTONDOWN and event.button == 1:
+#            x, y = event.pos
+#            x -= pythonImg.get_width() / 2
+#            y -= pythonImg.get_height() / 2
+#            pythons_pos.append((x,y))  # 蛇の位置を追加
+        # マウス移動で蛇を移動
+#        if event.type == MOUSEMOTION:
+#            x, y = event.pos
+#            x -= pythonImg.get_width() / 2
+#            y -= pythonImg.get_height() / 2
+#            cur_pos = (x,y)
+
+
 
 
 SCREEN_SIZE = (640, 480)
@@ -20,17 +38,7 @@ hello1 = sysfont.render("Hello, world!", False, (0,0,0))
 hello2 = sysfont.render("Hello, world!", True, (0,0,0))
 hello3 = sysfont.render("Hello, world!", True, (255,0,0), (255,255,0))
 
-#time
-clock = pygame.time.Clock()
-
-i=1
-
 while True:
-
-    clock.tick(1)#time
-    i += 1
-    print i
-
     screen.fill((0,0,255))
     
     # テキストを描画する

@@ -4,7 +4,19 @@ import pygame
 from pygame.locals import *
 import sys
 
+import pygame.time
+import pygame.mixer
+  
+pygame.mixer.init()
+  
+stereoSound = pygame.mixer.Sound('cat1.wav')
+ 
+ 
+pygame.time.wait(1000)
 
+stereoSound.play()
+while pygame.mixer.get_busy():
+	pass
 
 
 SCREEN_SIZE = (640, 480)
@@ -20,17 +32,7 @@ hello1 = sysfont.render("Hello, world!", False, (0,0,0))
 hello2 = sysfont.render("Hello, world!", True, (0,0,0))
 hello3 = sysfont.render("Hello, world!", True, (255,0,0), (255,255,0))
 
-#time
-clock = pygame.time.Clock()
-
-i=1
-
 while True:
-
-    clock.tick(1)#time
-    i += 1
-    print i
-
     screen.fill((0,0,255))
     
     # テキストを描画する
